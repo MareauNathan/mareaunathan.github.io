@@ -1,12 +1,143 @@
-body {
-    font-family: system-ui, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    line-height: 1.6;
-    color: #222;
+:root {
+    --rouge: #d62828;
+    --rouge-fonce: #a61e1e;
+    --rouge-clair: #fde8e8;
+    --texte: #1f1f23;
+    --texte-doux: #5c5c66;
+    --fond: #ffffff;
+    --fond-carte: #fafafa;
+    --bordure: #e5e5ea;
 }
 
-h1 {
-    margin-bottom: 0.25rem;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --rouge: #ef4444;
+        --rouge-fonce: #dc2626;
+        --rouge-clair: #3a1a1a;
+        --texte: #f2f2f5;
+        --texte-doux: #a8a8b3;
+        --fond: #141416;
+        --fond-carte: #1c1c20;
+        --bordure: #2e2e34;
+    }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    color: var(--texte);
+    background: var(--fond);
+}
+
+/* ---------- En-tête ---------- */
+header {
+    background: linear-gradient(135deg, var(--rouge), var(--rouge-fonce));
+    color: #fff;
+    padding: 3.5rem max(1.5rem, calc((100% - 800px) / 2)) 2.5rem;
+}
+
+header h1 {
+    margin: 0 0 0.25rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    letter-spacing: -0.02em;
+}
+
+header p {
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: #fff;
+    color: var(--rouge-fonce);
+}
+
+/* ---------- Contenu ---------- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+section { padding: 2rem 0; scroll-margin-top: 1rem; }
+
+h2 {
+    display: inline-block;
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid var(--rouge);
+}
+
+h3 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+
+a { color: var(--rouge); }
+a:hover { color: var(--rouge-fonce); }
+
+:focus-visible {
+    outline: 3px solid var(--rouge);
+    outline-offset: 3px;
+}
+
+/* ---------- Cartes projets ---------- */
+.projet {
+    background: var(--fond-carte);
+    border: 1px solid var(--bordure);
+    border-left: 6px solid var(--rouge);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projet:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(214, 40, 40, 0.15);
+}
+
+.projet p { margin: 0.4rem 0; color: var(--texte-doux); }
+.projet strong { color: var(--texte); }
+
+.projet a {
+    display: inline-block;
+    margin: 0.75rem 0.5rem 0 0;
+    padding: 0.45rem 1rem;
+    background: var(--rouge);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.projet a:hover { background: var(--rouge-fonce); color: #fff; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+    header { padding-top: 2.5rem; }
+    .projet { padding: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
 }
