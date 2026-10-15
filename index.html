@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Mareau - Portfolio</title>
+    <meta name="description" content="Portfolio de Nathan Mareau, étudiant en BUT Informatique et futur intégrateur web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="xp" aria-hidden="true"></div>
+
 <header>
-    <h1>Nathan Mareau</h1>
-    <p>Étudiant en BUT Informatique</p>
     <nav>
         <a href="#about">À propos</a>
+        <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
     </nav>
+    <div class="accueil">
+        <h1>
+            <span class="ligne"><span>Nathan</span></span>
+            <span class="ligne nom"><span>Mareau</span></span>
+        </h1>
+        <p class="metier">Étudiant en BUT Informatique, j'apprends à construire des sites web.</p>
+        <p class="cherche">Je cherche un stage du 12 avril au 4 juin 2027, puis une alternance en 2027-2028.</p>
+    </div>
 </header>
 
 <main>
@@ -22,13 +35,17 @@
         <h2>À propos</h2>
         <p>
             Je m'appelle Nathan, je suis étudiant en BUT Informatique et j'habite
-            à Laval.
+            près de Laval.
         </p>
         <p>
             Ce que j'aime le plus, c'est le front-end : transformer une idée ou une
             maquette en page web claire, propre et agréable à utiliser. Je travaille
             avec HTML, CSS et PHP, et j'apprends aussi les bases de données et le
             back-end pour comprendre un site de A à Z.
+        </p>
+        <p>
+            J'ai commencé l'informatique avec l'envie de créer des jeux vidéo. Je n'en
+            ai pas encore fait, mais j'y viens : je prépare un démineur en Python.
         </p>
         <p>
             En équipe, je suis à l'aise pour suivre le groupe et donner mon avis sans
@@ -39,44 +56,63 @@
             <strong>Je cherche</strong> un stage du 12 avril au 4 juin 2027, puis une
             alternance pour l'année 2027-2028.
         </p>
-        <p>
-            En dehors du code : jeux vidéo en équipe, escalade et natation.
-        </p>
+        <p>En dehors du code : jeux vidéo en équipe, escalade et natation.</p>
+    </section>
+
+    <section id="competences">
+        <h2>Compétences</h2>
+        <div class="competences">
+            <p><strong>Front-end.</strong> Je construis des pages en <strong>HTML5</strong> et <strong>CSS3</strong>, avec un peu de <strong>JavaScript</strong>. Je les rends <strong>responsive</strong> et je les dessine d'abord sur <strong>Figma</strong>.</p>
+            <p><strong>Back-end et données.</strong> Je fais du <strong>PHP</strong> et du <strong>SQL</strong> (<strong>MySQL</strong>), et je pratique le <strong>Java</strong> et le <strong>Python</strong> en cours.</p>
+            <p><strong>Au quotidien.</strong> Je travaille avec <strong>Git</strong> et <strong>GitHub</strong>, dans <strong>VS Code</strong>, <strong>IntelliJ</strong> ou <strong>Eclipse</strong>, et avec <strong>Microsoft 365</strong>.</p>
+        </div>
     </section>
 
     <section id="projets">
         <h2>Projets</h2>
+        <div class="grille">
+            <article class="projet">
+                <h3>Site vitrine pour une bijouterie</h3>
+                <p>Site de 5 pages avec charte graphique, navigation en 3 clics maximum et 7 éléments maximum par page.</p>
+                <p><strong>Mon rôle :</strong> à compléter</p>
+                <p><strong>Technos :</strong> HTML, CSS, Figma</p>
+                <div class="liens">
+                    <a href="LIEN_DEMO">Voir la démo</a>
+                    <a href="LIEN_GITHUB">Code</a>
+                </div>
+            </article>
 
-        <article class="projet">
-            <h3>Site vitrine pour une bijouterie</h3>
-            <p>Site de 5 pages avec charte graphique, navigation en 3 clics maximum et 7 éléments maximum par page.</p>
-            <p><strong>Mon rôle :</strong> à compléter</p>
-            <p><strong>Technos :</strong> HTML, CSS, Figma</p>
-            <a href="LIEN_DEMO">Voir la démo</a>
-            <a href="LIEN_GITHUB">Code</a>
-        </article>
+            <article class="projet">
+                <h3>Base de données relationnelle (type Canal+)</h3>
+                <p>Modélisation et création d'une base de 10 tables liées, avec requêtes de recherche, tri et jointures.</p>
+                <p><strong>Mon rôle :</strong> à compléter</p>
+                <p><strong>Technos :</strong> MySQL, MCD/MLD</p>
+                <div class="liens">
+                    <a href="LIEN_GITHUB">Schéma et requêtes</a>
+                </div>
+            </article>
 
-        <article class="projet">
-            <h3>Base de données relationnelle (type Canal+)</h3>
-            <p>Modélisation et création d'une base de 10 tables liées, avec requêtes de recherche, tri et jointures.</p>
-            <p><strong>Mon rôle :</strong> à compléter</p>
-            <p><strong>Technos :</strong> MySQL, MCD/MLD</p>
-            <a href="LIEN_GITHUB">Schéma et requêtes</a>
-        </article>
-
-        <article class="projet">
-            <h3>Analyse de données musicales en Java</h3>
-            <p>Application console qui charge 438 000 titres depuis des fichiers CSV, avec tri, filtrage et recherche, et compare les performances d'ArrayList et de LinkedList.</p>
-            <p><strong>Mon rôle :</strong> à compléter</p>
-            <p><strong>Technos :</strong> Java, CSV</p>
-            <a href="LIEN_GITHUB">Code</a>
-        </article>
+            <article class="projet">
+                <h3>Analyse de données musicales en Java</h3>
+                <p>Application console qui charge 438 000 titres depuis des fichiers CSV, avec tri, filtrage et recherche, et compare les performances d'ArrayList et de LinkedList.</p>
+                <p><strong>Mon rôle :</strong> à compléter</p>
+                <p><strong>Technos :</strong> Java, CSV</p>
+                <div class="liens">
+                    <a href="LIEN_GITHUB">Code</a>
+                </div>
+            </article>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <a href="mailto:ton-email@exemple.fr">ton-email@exemple.fr</a>
+        <p><a href="mailto:mareaunathan@gmail.com">mareaunathan@gmail.com</a></p>
+        <p class="reseau"><a href="https://www.linkedin.com/in/TON-PROFIL">Mon profil LinkedIn</a></p>
     </section>
 </main>
+
+<footer>© 2026 Nathan Mareau</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
