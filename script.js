@@ -8,3 +8,13 @@ function majBarre() {
 
 addEventListener("scroll", majBarre, { passive: true });
 majBarre();
+
+document.querySelectorAll("main h2").forEach(titre => {
+    const lien = document.createElement("a");
+    lien.href = "#";
+    lien.className = "haut";
+    lien.textContent = "↑";
+    lien.setAttribute("aria-label", "Revenir en haut de la page");
+    lien.title = "Revenir en haut";
+    titre.append(" ", lien);
+});
