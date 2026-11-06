@@ -41,7 +41,7 @@ header {
     display: flex; flex-direction: column;
     padding: 1.5rem max(1.25rem, calc((100% - 1000px) / 2)) 4rem;
     background-color: #7d0f1f;
-    background-image: url("arches.png");
+    background-image: url("assets/arches.png");
     color: #fff;
 }
 
@@ -92,6 +92,7 @@ h2::after {
     border-radius: 2px; background: var(--or);
 }
 
+/* Flèche de retour en haut, ajoutée à chaque titre par script.js */
 .haut {
     display: inline-block;
     margin-left: 0.5rem;
@@ -103,14 +104,9 @@ h2::after {
     transition: transform 0.2s, opacity 0.2s;
 }
 .haut:hover { transform: translateY(-4px); opacity: 1; }
+#contact .haut { font-size: 0.6em; text-decoration: none; }
 
-/* Dans le bloc Contact (fond bordeaux), la règle "#contact a" s'applique aussi à la flèche : on la corrige */
-#contact .haut {
-    font-size: 0.6em;
-    text-decoration: none;
-}
-
-#about p { max-width: 60rem; margin-bottom: 1.2rem; weight: 30px }
+#about p { max-width: 60rem; margin-bottom: 1.2rem; }
 /*#about p:first-of-type { font-size: 1.3rem; font-weight: 600; line-height: 1.5; }*/
 /*#about strong { box-shadow: inset 0 -0.4em 0 var(--surlignage); }*/
 
@@ -152,7 +148,7 @@ h2::after {
 #contact {
     margin: 2rem 0; padding: 3rem 2rem;
     background-color: #7d0f1f;
-    background-image: url("dark-dotted-2.png"); color: #fff;
+    background-image: url("assets/dark-dotted-2.png"); color: #fff;
     border-radius: 8px;
 }
 #contact h2 { color: #fff; }

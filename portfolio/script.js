@@ -9,6 +9,7 @@ function majBarre() {
 addEventListener("scroll", majBarre, { passive: true });
 majBarre();
 
+// Une flèche de retour en haut après chaque titre de section
 document.querySelectorAll("main h2").forEach(titre => {
     const lien = document.createElement("a");
     lien.href = "#";
